@@ -18,3 +18,13 @@ log/*
 # keep config folder with env files ONLY for demo purposes
 /config/
 /.env
+
+.turbo
+*.log
+dist
+dist-ssr
+*.local
+.env
+.cache
+server/dist
+public/dist

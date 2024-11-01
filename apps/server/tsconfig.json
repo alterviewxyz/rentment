@@ -1,0 +1,20 @@
+{
+  "extends": "@rentment/typescript-config/node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
+    "outDir": "dist",
+    "module": "CommonJS",
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "dist",
+    "build"
+  ],
+  "ts-node": {
+    "swc": false,
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@rentment/logger",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "source": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "lint": "eslint . --quiet"
+  },
+  "dependencies": {
+    "@rentment/eslint-config": "workspace:*",
+    "pino": "9.5.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "11.3.0"
+  }
+}

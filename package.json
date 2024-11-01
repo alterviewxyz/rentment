@@ -1,14 +1,22 @@
 {
-  "name": "monorepo",
-  "version": "1.0.0",
-  "description": "",
+  "name": "rentment",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "go": "pnpm --filter ** dev"
+    "build": "turbo build",
+    "dev": "cross-env FORCE_COLOR=1 turbo run dev --no-cache --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "cross-env FORCE_COLOR=1 turbo run test",
+    "typecheck": "turbo run typecheck"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "eslint": "^9.13.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "turbo": "^2.2.3"
+  },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
