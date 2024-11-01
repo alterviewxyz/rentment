@@ -20,7 +20,10 @@
     "turbo": "^2.2.3"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown",
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ]
   },
   "engines": {
     "node": "^20"
