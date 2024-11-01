@@ -1,14 +1,14 @@
-import express from 'express'
-import logger from '@rentment/logger'
+import express from "express";
+import logger from "@rentment/logger";
 
-const app = express()
+const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-const PORT = process.env.PORT || 9999
+const PORT = process.env.PORT || 9999;
 
 app.listen(PORT, () => {
-  logger.info(`Example app listening on port ${PORT}`)
-})
+  logger.info(`Example app listening on port ${PORT}`);
+});
