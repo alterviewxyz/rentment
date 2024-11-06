@@ -4,6 +4,7 @@ This monorepo includes the following packages and apps:
 
 - `docs`: a vanilla [vite](https://vitejs.dev) ts app
 - `web`: another vanilla [vite](https://vitejs.dev) ts app
+- `server`: an [express.js](https://expressjs.com/) ts app
 - `@rentment/ui`: a stub component & utility library shared by both `web` and `docs` applications
 - `@rentment/eslint-config`: shared `eslint` configurations
 - `@rentment/typescript-config`: `tsconfig.json`s used throughout the monorepo
@@ -20,7 +21,7 @@ This Turborepo has some additional tools already setup for you:
 
 ## Features
 
-- **Client:**
+- **Clients:**
   - **React:** A JavaScript library for building user interfaces.
   - **Vite:** A build tool that aims to provide a faster and leaner development experience for modern web projects.
   - **React Router:** A standard routing library for React.
@@ -32,24 +33,18 @@ This Turborepo has some additional tools already setup for you:
   - **Mongoose:** An Object Data Modeling (ODM) library for MongoDB and Node.js.
   - **cors:** A Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
   - **dotenv:** A zero-dependency module that loads environment variables from a `.env` file into `process.env`.
-  - **nodemon:** A utility that will monitor for any changes in your source and automatically restart your server.
   - **morgan:** An HTTP request logger middleware for Node.js.
   - **bcryptjs:** A library to help you hash passwords.
   - **jsonwebtoken:** An implementation of JSON Web Tokens.
 
 ## Scripts
 
-- **Client:**
+- `pnpm run dev`: Starts all the apps at the same time.
+- `pnpm run dev --filter web`: Just starts the `web` app.
+- `pnpm run dev --filter server`: Just starts the `server` app.
+- `pnpm run build`: Builds all the apps for production.
 
-  - `pnpm run go`: Starts the development server.
-  - `pnpm run build`: Builds the app for production.
-  - `pnpm run lint`: Lints the code using ESLint.
-  - `pnpm run preview`: Serves the production build locally.
-
-- **Server:**
-  - `pnpm run dev`: Starts the development server.
-
-## Environment Variables
+<!-- ## Environment Variables
 
 - Check the `.env` file in the `server` directory.
 
@@ -61,4 +56,4 @@ This Turborepo has some additional tools already setup for you:
   ```
 
 You can define your environment variables in this file.
-Feel free to add more variables as needed and modify the existing ones with your values.
+Feel free to add more variables as needed and modify the existing ones with your values. -->
