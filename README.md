@@ -37,6 +37,12 @@ This Turborepo has some additional tools already setup for you:
   - **bcryptjs:** A library to help you hash passwords.
   - **jsonwebtoken:** An implementation of JSON Web Tokens.
 
+## How To
+
+- First install node.js and npm on your system.
+- Then install pnpm using `npm install -g pnpm`.
+- Then install project dependencies using `pnpm install`
+
 ## Scripts
 
 - `pnpm run dev`: Starts all the apps at the same time.
