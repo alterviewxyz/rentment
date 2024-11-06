@@ -2,9 +2,5 @@
 module.exports = {
   root: true,
   ignorePatterns: [".eslintrc.cjs"],
-  extends: ["@rentment/eslint-config/index.js"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: true,
-  },
+  extends: ["@rentment/eslint-config/base.config.mjs"],
 };

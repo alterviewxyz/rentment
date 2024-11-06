@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm *.tsbuildinfo",
     "test": "jest --setupFiles dotenv/config",
-    "lint": "eslint . --quiet"
+    "lint": "eslint . --config ../../packages/eslint-config/server.config.mjs --ignore-pattern dist"
   },
   "dependencies": {
     "@rentment/eslint-config": "workspace:*",

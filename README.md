@@ -2,8 +2,7 @@ This monorepo includes the following packages and apps:
 
 ### Apps and Packages
 
-- `docs`: a vanilla [vite](https://vitejs.dev) ts app
-- `web`: another vanilla [vite](https://vitejs.dev) ts app
+- `web`: a vanilla [vite](https://vitejs.dev) ts app
 - `server`: an [express.js](https://expressjs.com/) ts app
 - `@rentment/ui`: a stub component & utility library shared by both `web` and `docs` applications
 - `@rentment/eslint-config`: shared `eslint` configurations

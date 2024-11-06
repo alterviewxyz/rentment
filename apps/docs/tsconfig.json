@@ -1,4 +1,0 @@
-{
-  "extends": "@rentment/typescript-config/vite.json",
-  "include": ["src"]
-}
