@@ -1,4 +1,4 @@
-import type { Meta } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { CardBase } from "./CardBase";
 
 const meta: Meta<typeof CardBase> = {
@@ -13,3 +13,6 @@ const meta: Meta<typeof CardBase> = {
 };
 
 export default meta;
+
+type Story = StoryObj<typeof meta>;
+export const Main: Story = {};

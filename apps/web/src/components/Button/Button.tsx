@@ -1,7 +1,8 @@
 import React from "react";
 import "./Button.css";
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: "primary" | "secondary" | "black" | "white";
   variant?: "solid" | "outline" | "text";
   icon?: React.ReactNode;
