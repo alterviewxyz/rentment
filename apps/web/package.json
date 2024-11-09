@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --config ../../packages/eslint-config/web.config.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o ../../dist-storybook"
   },
   "dependencies": {
     "@rentment/ui": "workspace:*",
