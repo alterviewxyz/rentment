@@ -10,6 +10,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/storybook"]
+    },
+    "build-storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/storybook"]
     }
   }
 }
