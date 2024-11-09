@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v4
 
       - name: Cache turbo build setup
@@ -21,15 +22,25 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-
 
+      # Setup pnpm
       - uses: pnpm/action-setup@v3
         with:
           version: 8
 
+      # Install dependencies
+      - name: Install Dependencies
+        run: pnpm install
+
+      # Build Storybook
       - name: Build Storybook
         run: pnpm run build-storybook
 
+      # Deploy to GitHub Pages (only on push to main)
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist-storybook
+          # Optionally specify the branch
+          # publish_branch: gh-pages
