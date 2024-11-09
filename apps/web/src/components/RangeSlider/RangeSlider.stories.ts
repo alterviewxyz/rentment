@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { RangeSlider } from "./RangeSlider";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof RangeSlider> = {
+  title: "Components/Form/RangeSlider",
+  component: RangeSlider,
   parameters: {
     layout: "centered",
   },

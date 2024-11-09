@@ -2,7 +2,7 @@ import React from "react";
 import "./TextArea.css";
 
 export interface TextAreaProps
-  extends React.ButtonHTMLAttributes<HTMLTextAreaElement> {}
+  extends React.HTMLAttributes<HTMLTextAreaElement> {}
 
 const TextArea = ({ ...props }: TextAreaProps) => {
   const classNames = ["textarea"];

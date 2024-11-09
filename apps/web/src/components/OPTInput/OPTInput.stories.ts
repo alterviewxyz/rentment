@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { OPTInput } from "./OPTInput";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof OPTInput> = {
+  title: "Components/Form/OPTInput",
+  component: OPTInput,
   parameters: {
     layout: "centered",
   },

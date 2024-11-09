@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { FilterAccordion } from "./FilterAccordion";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof FilterAccordion> = {
+  title: "Components/FilterAccordion",
+  component: FilterAccordion,
   parameters: {
     layout: "centered",
   },

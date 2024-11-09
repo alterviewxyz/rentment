@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { RadioButton } from "./RadioButton";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof RadioButton> = {
+  title: "Components/Form/RadioButton",
+  component: RadioButton,
   parameters: {
     layout: "centered",
   },

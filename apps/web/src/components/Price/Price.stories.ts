@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { Price } from "./Price";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof Price> = {
+  title: "Components/Price",
+  component: Price,
   parameters: {
     layout: "centered",
   },

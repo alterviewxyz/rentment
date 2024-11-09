@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { Checkbox } from "./Checkbox";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof Checkbox> = {
+  title: "Components/Form/Checkbox",
+  component: Checkbox,
   parameters: {
     layout: "centered",
   },

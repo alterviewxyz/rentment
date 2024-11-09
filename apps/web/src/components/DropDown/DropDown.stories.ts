@@ -1,9 +1,9 @@
 import type { Meta } from "@storybook/react";
-import { TextArea } from "./TextArea";
+import { DropDown } from "./DropDown";
 
-const meta: Meta<typeof TextArea> = {
-  title: "Components/Form/TextArea",
-  component: TextArea,
+const meta: Meta<typeof DropDown> = {
+  title: "Components/Form/DropDown",
+  component: DropDown,
   parameters: {
     layout: "centered",
   },
