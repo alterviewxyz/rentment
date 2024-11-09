@@ -1,9 +1,6 @@
-// Button.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { Button } from "./Button";
 
-// Meta configuration for the Button component
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
@@ -34,10 +31,12 @@ const meta: Meta<typeof Button> = {
     variant: "solid",
     disabled: false,
   },
-} satisfies Meta<typeof Button>;
+};
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
 export const Primary: Story = {
   args: {
     color: "primary",

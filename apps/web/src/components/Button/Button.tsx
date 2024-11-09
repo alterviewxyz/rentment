@@ -17,8 +17,8 @@ export interface ButtonProps
 const Button = ({
   label,
   icon = null,
-  variant = "solid", // solid, outline, text
-  color = "primary", // primary, secondary, black, white
+  variant = "solid",
+  color = "primary",
   size,
   disabled = false,
   ...props
