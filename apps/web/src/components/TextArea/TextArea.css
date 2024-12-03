@@ -1,1 +1,42 @@
-/* Base Styles */
+/* Container for the TextArea */
+.textarea-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Base TextArea styles */
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: both;
+  /* Allow resizing */
+  overflow: auto;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+}
+
+.textarea:focus {
+  border-color: #194bf0;
+  box-shadow: 0 0 4px rgba(25, 75, 240, 0.2);
+}
+
+/* Placeholder styling */
+.textarea::placeholder {
+  color: #aaa;
+}
+
+/* Footer for character count */
+.textarea-footer {
+  font-size: 12px;
+  color: #777;
+  text-align: left;
+  direction: rtl;
+}
