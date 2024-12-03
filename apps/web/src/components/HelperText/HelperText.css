@@ -1,1 +1,31 @@
-/* Base Styles */
+/* Base styles for HelperText */
+.helper-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  direction: rtl; /* Assuming Persian/Arabic text direction */
+}
+
+.helper-text__icon {
+  display: inline-block;
+}
+
+.helper-text__text {
+  display: inline-block;
+}
+
+/* Variant styles */
+.helper-text--info {
+  color: #6c757d; /* Gray color for info */
+}
+
+.helper-text--error {
+  color: #dc3545; /* Red color for error */
+}
+
+/* Disabled styles */
+.helper-text--disabled {
+  color: #adb5bd; /* Lighter gray for disabled text */
+}

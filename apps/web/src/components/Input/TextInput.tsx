@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HelperText } from "../HelperText/HelperText";
 import "./TextInput.css";
 
 export interface TextInputProps
@@ -86,9 +87,10 @@ const TextInput = ({
         )}
         {renderRightIcon()}
       </div>
-      {errorText && <div className="error-text">{errorText}</div>}
-      {helperText && !errorText && (
-        <div className="helper-text">{helperText}</div>
+      {errorText ? (
+        <HelperText text={errorText} variant="error" />
+      ) : (
+        helperText && <HelperText text={helperText} variant="info" />
       )}
     </div>
   );
