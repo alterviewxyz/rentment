@@ -1,68 +1,82 @@
 import React from "react";
-import { Button } from "../Button/Button";
-import "./header.css";
-
-type User = {
-  name: string;
-};
+import { Logo } from "../Logo/Logo";
+import "./Header.css";
 
 export interface HeaderProps {
-  user?: User;
+  /** Navigation links */
+  navLinks: { label: string; href: string }[];
+  /** Logged-in user data */
+  user?: {
+    name: string;
+    avatarUrl: string;
+  };
+  /** Search icon or search functionality */
+  onSearchClick?: () => void;
+  /** Callback when login button is clicked */
   onLogin?: () => void;
+  /** Callback when logout button is clicked */
   onLogout?: () => void;
+  /** Callback when create account button is clicked */
   onCreateAccount?: () => void;
 }
 
-const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
-    <div className="storybook-header">
-      <div>
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
+const Header: React.FC<HeaderProps> = ({
+  navLinks,
+  user,
+  onSearchClick,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+}) => {
+  return (
+    <header className="header">
+      <div className="header__logo">
+        <Logo className="header__logo_svg" />
+        <span> رنت‌منت!</span>
       </div>
-      <div>
+      <nav className="header__nav">
+        {navLinks.map((link) => (
+          <a key={link.href} href={link.href} className="header__link">
+            {link.label}
+          </a>
+        ))}
+        <button
+          className="header__search"
+          onClick={onSearchClick}
+          aria-label="Search"
+        >
+          🔍
+        </button>
+      </nav>
+      <div className="header__actions">
         {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button
-              variant="solid"
-              color="primary"
-              size="small"
-              onClick={onCreateAccount}
-              label="Sign up"
+          <div className="header__user">
+            <img
+              src={user.avatarUrl}
+              alt={user.name}
+              className="header__avatar"
             />
-          </>
+            <span className="header__username">{user.name}</span>
+            {/* <button className="header__logout" onClick={onLogout}>
+              خروج
+            </button> */}
+          </div>
+        ) : (
+          <div className="header__auth-buttons">
+            <button className="header__login" onClick={onLogin}>
+              ورود
+            </button>
+            <button
+              className="header__create-account"
+              onClick={onCreateAccount}
+            >
+              ثبت‌نام
+            </button>
+          </div>
         )}
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export { Header };
