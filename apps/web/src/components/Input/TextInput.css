@@ -28,6 +28,10 @@
   font-size: 14px;
 }
 
+.text-input-field[type="number"] {
+  direction: ltr;
+}
+
 .icon-left,
 .icon-right,
 .toggle-password-visibility {

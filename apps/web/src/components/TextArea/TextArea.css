@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-family: Arial, sans-serif;
 }
 
 /* Base TextArea styles */
@@ -18,7 +17,6 @@
   resize: both;
   /* Allow resizing */
   overflow: auto;
-  font-family: inherit;
   color: #333;
   outline: none;
 }
