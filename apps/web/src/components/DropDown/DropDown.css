@@ -1,1 +1,93 @@
-/* Base Styles */
+/* Container */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown control (input + button) */
+.dropdown__control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.dropdown--error .dropdown__control {
+  border-color: #e53935;
+}
+
+.dropdown__control:focus-within {
+  border-color: #1976d2;
+}
+
+/* Input field */
+.dropdown__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Dropdown button */
+.dropdown__button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+}
+
+/* Options container */
+.dropdown__options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Option styles */
+.dropdown__option {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown__option:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown__empty {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+/* Selected option styling */
+.dropdown__option--selected {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+/* Checkbox styling */
+.dropdown__option input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}

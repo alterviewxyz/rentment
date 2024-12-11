@@ -1,0 +1,17 @@
+/* Reuse styles from TextInput */
+.search-input__clear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+}
+
+.search-input__clear-button:hover {
+  color: #333;
+}
+
+.search-input__search-icon {
+  font-size: 16px;
+  color: #999;
+}
